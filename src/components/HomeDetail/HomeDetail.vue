@@ -4,7 +4,7 @@
         <fade>
             <SlideShow v-if="flag" @changeFlagfalse="changefalse" ></SlideShow>
         </fade>
-        <Header></Header>
+        <Header msg="上海"></Header>
         <List :list="list"></List>
     </div>
 </template>

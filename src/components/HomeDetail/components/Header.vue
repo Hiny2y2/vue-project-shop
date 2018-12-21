@@ -9,7 +9,7 @@
                     <div class="iconfont back-icon">&#xe624;</div>
                 </router-link>
             </div>
-            <div class="header-center">上海</div>
+            <div class="header-center">{{msg||'Undefined'}}</div>
             <div class="header-right"></div>
         </div>
         
@@ -18,11 +18,15 @@
 <script>
 export default {
     name: "DetailHeader",
+    props:{
+        msg:String
+    },
     data (){
         return {
             show:true,
             scrollTop:null,
-            opacityStyle:{opacity:0}
+            opacityStyle:{opacity:0},
+            msg:null
         }
     },
     methods: {

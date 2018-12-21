@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home/Home'
 import Cityhome from '@/components/city/Cityhome'
 import HomeDetail from '@/components/HomeDetail/HomeDetail'
+import Comment from '@/components/comment/comment'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/detail/:id',
       name: 'Detail',
       component: HomeDetail
+    },
+    {
+      path: '/Comment',
+      name: 'Comment',
+      component: Comment
     }
   ]
 })

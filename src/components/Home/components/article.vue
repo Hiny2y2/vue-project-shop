@@ -1,11 +1,11 @@
 <template>
     <div class='artcle'>
         <div class="where">周末去哪儿玩</div>
-        <div class="items" v-for="items of art" :key="items.id">
+        <router-link to="/comment" tag="div" class="items" v-for="items of art" :key="items.id">
             <img :src="items.imgUrl" alt="">
             <p class='items-title'>{{items.title}}</p>
             <p class='items-desc'>{{items.desc}}}</p>
-        </div>
+        </router-link>
     </div>
 </template>
 <script>
@@ -23,13 +23,14 @@ export default {
 </script>
 <style lang='stylus' scoped>
     .artcle
-        background:#ccc
+        background:#fff
         .where
             padding:.2rem
             font-weight:bold
+            background:#ccc
         .items
-            margin-bottom:.1rem
-            box-shadow:#666 0 1px 2px
+            margin-bottom:.2rem
+            box-shadow:#66CCFF 0 1px 8px
             background:#fff
             .items-title
                 padding:.15rem
